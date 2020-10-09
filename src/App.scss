@@ -1,0 +1,19 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.App {
+  width: 100%;
+  height: 100vh;
+
+  .container {
+    background-color: antiquewhite;
+
+    height: 500px;
+
+    margin-top: 4rem;
+    padding: 1rem;
+  }
+}

@@ -1,0 +1,69 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Montserrat", sans-serif;
+  --header1: 5rem;
+  --header2: 4.4rem;
+  --header3: 4rem;
+  --header4: 3.5rem;
+  --header5: 3rem;
+  --header6: 2.5rem;
+  --text-size: 2rem;
+  --backgroundColor: #f5f6fa;
+  --lightBlue: #ecf7fd;
+  --lightGreen: #e7f6f3;
+  --lightOrange: #fff4f0;
+  --green: #19a58a;
+  --orange: #ff8c60;
+  --red: #d09a9a;
+  --blue: #3972e3;
+}
+
+h1 {
+  font-size: var(--header1);
+  font-weight: 300;
+}
+
+h2 {
+  font-size: var(--header2);
+  font-weight: 300;
+}
+
+h3 {
+  font-size: var(--header3);
+  font-weight: 300;
+}
+
+h4 {
+  font-size: var(--header4);
+  font-weight: 300;
+}
+
+h5 {
+  font-size: var(--header5);
+  font-weight: 300;
+}
+h6 {
+  font-size: var(--header6);
+  font-weight: 300;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+
+ul {
+  list-style: none;
+}
+
+li,
+p,
+a {
+  font-size: var(--text-size);
+  font-weight: 300;
+}
