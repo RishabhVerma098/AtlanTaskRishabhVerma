@@ -1,0 +1,9 @@
+.bottom-container {
+  width: 100%;
+  height: 450px; //for now , after content is added then max
+  margin-top: 1rem;
+  display: flex;
+  .news {
+    flex: 1;
+  }
+}
