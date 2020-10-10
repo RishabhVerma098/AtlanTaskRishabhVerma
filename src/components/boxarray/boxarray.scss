@@ -1,0 +1,33 @@
+.box-array {
+  margin-top: 2rem;
+
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  .box {
+    width: 300px;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 1rem;
+
+    hr {
+      margin-top: 1rem;
+      margin-right: 50%;
+      height: 0.3em;
+      border-radius: 10px;
+      background-color: var(--lightGreen);
+      border: none;
+    }
+    h5 {
+      font-size: 2.7rem;
+      color: white;
+      font-weight: 500;
+    }
+    p {
+      padding-top: 1rem;
+      font-size: 1.2rem;
+      color: white;
+      font-weight: 500;
+    }
+  }
+}

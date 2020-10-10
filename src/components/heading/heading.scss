@@ -1,0 +1,21 @@
+.heading {
+  display: flex;
+  padding-top: 3rem;
+  width: 100%;
+  justify-content: space-between;
+  .logo {
+    display: flex;
+    flex-direction: column;
+    img {
+      width: 120px;
+      height: 50px;
+    }
+  }
+  .date {
+    padding: 3rem;
+    p {
+      font-size: 1.3rem;
+      font-weight: 400;
+    }
+  }
+}
