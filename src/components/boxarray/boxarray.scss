@@ -9,7 +9,14 @@
     padding: 2rem;
     background-color: white;
     border-radius: 1rem;
+    box-shadow: 0px 0px 61px -8px rgba(57, 114, 227, 0.15);
+    transition: transform 0.4s ease-in-out, background-color 0.2s ease-in-out;
 
+    &:hover {
+      transform: translateY(-10px);
+      cursor: pointer;
+      transition: transform 0.4s ease-in-out, background-color 0.2s ease-in-out;
+    }
     hr {
       margin-top: 1rem;
       margin-right: 50%;
@@ -20,13 +27,13 @@
     }
     h5 {
       font-size: 2.7rem;
-      color: white;
+
       font-weight: 500;
     }
     p {
       padding-top: 1rem;
       font-size: 1.2rem;
-      color: white;
+
       font-weight: 500;
     }
   }
