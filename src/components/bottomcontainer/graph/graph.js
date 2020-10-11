@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import "./graph.scss";
 import "../../../../node_modules/react-vis/dist/style.css";
 import { XYPlot, LineMarkSeries, XAxis, YAxis } from "react-vis";
