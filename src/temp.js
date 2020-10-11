@@ -187,14 +187,13 @@ export const toss_win = {
 };
 
 export const player_of_the_match = [
-  { x: "CH Gayle", y: 17 },
-  { x: "SK Raina", y: 13 },
-  { x: "MS Dhoni", y: 12 },
-  { x: "G Gambhir", y: 12 },
-  { x: "DA Warner", y: 14 },
-  { x: "RG Sharma", y: 13 },
-  { x: "YK Pathan", y: 15 },
-  { x: "AB de Villiers", y: 14 },
+  { x: "CH Gayle", y: 17, color: ["#19a58a", "#e7f6f3"] },
+
+  { x: "MS Dhoni", y: 12, color: ["#ff8c60", "#fff4f0"] },
+
+  { x: "DA Warner", y: 14, color: ["#3972e3", "#ecf7fd"] },
+  { x: "RG Sharma", y: 13, color: ["#fecc8c", "#fffaf4"] },
+  { x: "YK Pathan", y: 15, color: ["#d07475", "#fcf0f0"] },
 ];
 
 export const location_wise_toss = [

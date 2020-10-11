@@ -1,7 +1,32 @@
 import React from "react";
 import "./manofmatch.scss";
+import { player_of_the_match } from "../../../temp";
 function ManOfMatch() {
-  return <div className="man_of_match"></div>;
+  let data = player_of_the_match;
+  return (
+    <div className="man_of_match">
+      <h4>Man Of Match</h4>
+      {data.map((i) => {
+        return (
+          <div className="block">
+            <div className="title">
+              <p>{i.x}</p>
+              <p>{i.y}</p>
+            </div>
+            <div className="contain" style={{ backgroundColor: i.color[1] }}>
+              <div
+                className="bar"
+                style={{
+                  width: `${(i.y / 20) * 100}%`,
+                  backgroundColor: i.color[0],
+                }}
+              ></div>
+            </div>
+          </div>
+        );
+      })}
+    </div>
+  );
 }
 
 export default ManOfMatch;

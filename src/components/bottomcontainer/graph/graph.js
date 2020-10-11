@@ -5,9 +5,9 @@ import { XYPlot, LineMarkSeries, XAxis, YAxis } from "react-vis";
 import { useSelector } from "react-redux";
 function Graph() {
   const data = useSelector((state) => state.changeGraph);
-  useEffect(() => {
-    window.scrollTo(0, 250);
-  }, [data]);
+  // useEffect(() => {
+  //   window.scrollTo(0, 250);
+  // }, [data]);
   if (data !== null) {
     return (
       <div className="graph">
