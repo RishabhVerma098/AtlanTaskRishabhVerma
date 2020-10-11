@@ -7,6 +7,7 @@
     margin-bottom: 2rem;
     font-size: 2rem;
     color: rgb(173, 173, 173);
+    font-weight: 300;
   }
   .block {
     width: 100%;
@@ -15,7 +16,9 @@
       display: flex;
       justify-content: space-between;
       p {
+        font-weight: 600;
         font-size: 1.3rem;
+        color: rgb(173, 173, 173);
       }
     }
     .contain {

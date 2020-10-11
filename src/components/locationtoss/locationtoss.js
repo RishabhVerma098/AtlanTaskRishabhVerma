@@ -15,6 +15,7 @@ import { location_wise_toss } from "../../temp";
 function LocationToss() {
   return (
     <div className="loc-toss">
+      <h6>Win rate in each city based on toss wins</h6>
       <XYPlot
         width={1200}
         height={500}

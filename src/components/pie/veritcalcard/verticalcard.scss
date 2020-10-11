@@ -8,6 +8,7 @@
     h4 {
       font-size: 2rem;
       color: rgb(173, 173, 173);
+      font-weight: 300;
     }
     .lower {
       margin-top: 2rem;
@@ -20,8 +21,9 @@
         align-items: center;
         h5 {
           font-size: 3rem;
-          font-weight: 500;
+
           color: var(--blue);
+          font-weight: 300;
         }
         p {
           font-size: 1.2rem;
