@@ -14,6 +14,18 @@ function App() {
       <BottomContainer />
       <Pie />
       <LocationToss />
+      <div className="footer">
+        <img src={require("./assets/images/logo.png")} alt="logo"></img>
+        <div className="right">
+          <p>By Rishabh verma</p>
+          <ul>
+            <li>
+              <p>Github</p>
+              <p>Email</p>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
   );
 }
