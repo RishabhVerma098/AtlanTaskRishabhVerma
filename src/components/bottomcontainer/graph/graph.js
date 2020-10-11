@@ -3,18 +3,34 @@ import "./graph.scss";
 import "../../../../node_modules/react-vis/dist/style.css";
 import { XYPlot, LineMarkSeries, XAxis, YAxis } from "react-vis";
 import { useSelector } from "react-redux";
+import { useMediaQuery } from "react-responsive";
 function Graph() {
+  const isTabletOrMobile1 = useMediaQuery({ query: "(max-width: 1315px)" });
+  const isTabletOrMobile2 = useMediaQuery({ query: "(max-width: 1150px)" });
+  const isTabletOrMobile3 = useMediaQuery({ query: "(max-width: 949px)" });
+  const isTabletOrMobile4 = useMediaQuery({ query: "(max-width: 850px)" });
+  const isTabletOrMobile5 = useMediaQuery({ query: "(max-width: 500px)" });
   const data = useSelector((state) => state.changeGraph);
-  // useEffect(() => {
-  //   window.scrollTo(0, 250);
-  // }, [data]);
+
   if (data !== null) {
     return (
       <div className="graph">
         <XYPlot
           xType="ordinal"
-          height={600}
-          width={900}
+          height={isTabletOrMobile5 ? 500 : 600}
+          width={
+            isTabletOrMobile1
+              ? isTabletOrMobile2
+                ? isTabletOrMobile3
+                  ? isTabletOrMobile4
+                    ? isTabletOrMobile5
+                      ? 350
+                      : 400
+                    : 800
+                  : 500
+                : 700
+              : 900
+          }
           yDomain={data.yDomain}
           margin={{ bottom: "300" }}
         >

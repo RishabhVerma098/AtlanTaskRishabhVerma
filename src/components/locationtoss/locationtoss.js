@@ -12,13 +12,26 @@ import {
   VerticalBarSeries,
 } from "react-vis";
 import { location_wise_toss } from "../../temp";
+import { useMediaQuery } from "react-responsive";
+
 function LocationToss() {
+  const isTabletOrMobile1 = useMediaQuery({ query: "(max-width: 1315px)" });
+  const isTabletOrMobile2 = useMediaQuery({ query: "(max-width: 850px)" });
+  const isTabletOrMobile3 = useMediaQuery({ query: "(max-width: 530px)" });
   return (
     <div className="loc-toss">
       <h6>Win rate in each city based on toss wins</h6>
       <XYPlot
-        width={1200}
-        height={500}
+        width={
+          isTabletOrMobile1
+            ? isTabletOrMobile2
+              ? isTabletOrMobile3
+                ? 380
+                : 500
+              : 800
+            : 1200
+        }
+        height={isTabletOrMobile2 ? 400 : 500}
         yDomain={[30, 110]}
         xType="ordinal"
         margin={{ bottom: 100 }}

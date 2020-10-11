@@ -1,9 +1,9 @@
 .box-array {
   margin-top: 2rem;
-
   width: 100%;
   display: flex;
   justify-content: space-between;
+
   .box {
     width: 300px;
     padding: 2rem;
@@ -35,6 +35,52 @@
       font-size: 1.2rem;
 
       font-weight: 500;
+    }
+  }
+}
+
+@media (max-width: 1315px) {
+  .box-array {
+    .box {
+      width: 250px;
+    }
+  }
+}
+
+@media (max-width: 1150px) {
+  .box-array {
+    flex-direction: column;
+    .top,
+    .bottom-now {
+      display: flex;
+      margin-top: 2rem;
+      .box {
+        margin-left: 2rem;
+        flex: 1;
+        hr,
+        p {
+          display: none;
+        }
+        h5 {
+          font-size: 2rem;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 540px) {
+  .box-array {
+    .top,
+    .bottom-now {
+      .box {
+        margin-left: 1rem;
+        margin-right: 1rem;
+        h5 {
+          font-size: 1.2rem;
+        }
+      }
     }
   }
 }

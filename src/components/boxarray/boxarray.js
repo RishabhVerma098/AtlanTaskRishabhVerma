@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { changeGraph } from "../../store/actions";
 import "./boxarray.scss";
-
+import { useMediaQuery } from "react-responsive";
 function BoxArray() {
   const dispatch = useDispatch();
   const [ques, setques] = useState([
@@ -72,34 +72,101 @@ function BoxArray() {
     setques([...temp_ques]);
     dispatch(changeGraph(id));
   };
-
-  return (
-    <div className="box-array">
-      {ques.map((i) => {
-        return (
-          <div
-            className="box"
-            key={i.id}
-            onClick={() => changeData(i.id)}
-            style={{
-              backgroundColor: i.selected ? i.color : "white",
-              boxShadow: i.selected
-                ? i.shadow
-                : " 0px 0px 61px -8px rgba(57, 114, 227, 0.15)",
-            }}
-          >
-            <h5 style={{ color: i.selected ? "white" : i.color }}>{i.title}</h5>
-            <hr
-              style={{ backgroundColor: i.selected ? "white" : i.lightColor }}
-            ></hr>
-            <p style={{ color: i.selected ? "white" : i.color }}>
-              {i.description}
-            </p>
-          </div>
-        );
-      })}
-    </div>
-  );
+  const isTabletOrMobile = useMediaQuery({ query: "(max-width: 1150px)" });
+  if (!isTabletOrMobile) {
+    return (
+      <div className="box-array">
+        {ques.map((i) => {
+          return (
+            <div
+              className="box"
+              key={i.id}
+              onClick={() => changeData(i.id)}
+              style={{
+                backgroundColor: i.selected ? i.color : "white",
+                boxShadow: i.selected
+                  ? i.shadow
+                  : " 0px 0px 61px -8px rgba(57, 114, 227, 0.15)",
+              }}
+            >
+              <h5 style={{ color: i.selected ? "white" : i.color }}>
+                {i.title}
+              </h5>
+              <hr
+                style={{ backgroundColor: i.selected ? "white" : i.lightColor }}
+              ></hr>
+              <p style={{ color: i.selected ? "white" : i.color }}>
+                {i.description}
+              </p>
+            </div>
+          );
+        })}
+      </div>
+    );
+  } else {
+    return (
+      <div className="box-array">
+        <div className="top">
+          {ques.slice(0, 2).map((i) => {
+            return (
+              <div
+                className="box"
+                key={i.id}
+                onClick={() => changeData(i.id)}
+                style={{
+                  backgroundColor: i.selected ? i.color : "white",
+                  boxShadow: i.selected
+                    ? i.shadow
+                    : " 0px 0px 61px -8px rgba(57, 114, 227, 0.15)",
+                }}
+              >
+                <h5 style={{ color: i.selected ? "white" : i.color }}>
+                  {i.title}
+                </h5>
+                <hr
+                  style={{
+                    backgroundColor: i.selected ? "white" : i.lightColor,
+                  }}
+                ></hr>
+                <p style={{ color: i.selected ? "white" : i.color }}>
+                  {i.description}
+                </p>
+              </div>
+            );
+          })}
+        </div>
+        <div className="bottom-now">
+          {ques.slice(2, 4).map((i) => {
+            return (
+              <div
+                className="box"
+                key={i.id}
+                onClick={() => changeData(i.id)}
+                style={{
+                  backgroundColor: i.selected ? i.color : "white",
+                  boxShadow: i.selected
+                    ? i.shadow
+                    : " 0px 0px 61px -8px rgba(57, 114, 227, 0.15)",
+                }}
+              >
+                <h5 style={{ color: i.selected ? "white" : i.color }}>
+                  {i.title}
+                </h5>
+                <hr
+                  style={{
+                    backgroundColor: i.selected ? "white" : i.lightColor,
+                  }}
+                ></hr>
+                <p style={{ color: i.selected ? "white" : i.color }}>
+                  {i.description}
+                </p>
+              </div>
+            );
+          })}
+        </div>
+      </div>
+    );
+  }
 }
 
 export default BoxArray;

@@ -33,3 +33,10 @@
     }
   }
 }
+
+@media (max-width: 540px) {
+  .App {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
