@@ -1,8 +1,17 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./manofmatch.scss";
 import { player_of_the_match } from "../../../temp";
 function ManOfMatch() {
   let data = player_of_the_match;
+
+  const [time, setTime] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setTime(false);
+    }, 1000);
+  }, []);
+
   return (
     <div className="man_of_match">
       <h4>Man Of Match</h4>
@@ -17,7 +26,7 @@ function ManOfMatch() {
               <div
                 className="bar"
                 style={{
-                  width: `${(i.y / 20) * 100}%`,
+                  width: time ? "10%" : `${(i.y / 20) * 100}%`,
                   backgroundColor: i.color[0],
                 }}
               ></div>
