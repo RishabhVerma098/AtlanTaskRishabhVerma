@@ -4,6 +4,8 @@ import {
   matches_at_each_venue_data,
   matches_played_by_team_data,
   initial_data,
+  toss_win,
+  matches_win_by_team_data,
 } from "../../temp";
 
 export const changeGraph = (id) => {

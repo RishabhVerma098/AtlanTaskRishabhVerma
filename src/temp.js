@@ -137,20 +137,95 @@ export const matches_played_by_team_data = {
     { x: "Rising Pune Supergiants", y: 13 },
   ],
 };
-export const matches_win_by_team_data = [
-  { x: "Sunrisers Hyderabad", y: 41 },
-  { x: "Rising Pune Supergiant", y: 9 },
-  { x: "Kolkata Knight Riders", y: 76 },
-  { x: "Kings XI Punjab", y: 69 },
-  { x: "Royal Challengers Bangalore", y: 72 },
-  { x: "Mumbai Indians", y: 91 },
-  { x: "Delhi Daredevils", y: 61 },
-  { x: "Gujarat Lions", y: 12 },
-  { x: "Chennai Super Kings", y: 78 },
-  { x: "Rajasthan Royals", y: 62 },
-  { x: "Deccan Chargers", y: 28 },
-  { x: "Pune Warriors", y: 11 },
-  { x: "Kochi Tuskers Kerala", y: 5 },
-  { x: "", y: 2 },
-  { x: "Rising Pune Supergiants", y: 4 },
+export const matches_win_by_team_data = {
+  colorRange: ["#19a58a", "#ff8c60", "#fecc8c", "#d07475", "#3972e3"],
+  title: "See who is best performing team !",
+  first: {
+    title: "1,111",
+
+    des: "Total Matches",
+  },
+  second: {
+    title: "156",
+
+    des: "Most played by single team",
+  },
+  data: [
+    { label: "SH", angle: 41 },
+    { label: "KKR", angle: 76 },
+    { label: "KXIP", angle: 69 },
+    { label: "RCB", angle: 72 },
+    { label: "MI", angle: 91 },
+    { label: "DD", angle: 61 },
+    { label: "GL", angle: 12 },
+    { label: "CSK", angle: 78 },
+    { label: "RR", angle: 62 },
+    { label: "D", angle: 28 },
+  ],
+};
+
+// export const num_of_toss = [
+//   { x: "field", y: 362 },
+//   { x: "bat", y: 272 },
+// ];
+
+export const toss_win = {
+  colorRange: ["#19a58a", "#ff8c60"],
+  title: "Toss Analysis",
+  first: {
+    title: "362",
+    des: "Field",
+  },
+  second: {
+    title: "272",
+    des: "Bat",
+  },
+  data: [
+    { label: "field", angle: 201 },
+    { label: "bat", angle: 124 },
+  ],
+};
+
+export const player_of_the_match = [
+  { x: "CH Gayle", y: 17 },
+  { x: "SK Raina", y: 13 },
+  { x: "MS Dhoni", y: 12 },
+  { x: "G Gambhir", y: 12 },
+  { x: "DA Warner", y: 14 },
+  { x: "RG Sharma", y: 13 },
+  { x: "YK Pathan", y: 15 },
+  { x: "AB de Villiers", y: 14 },
+];
+
+export const location_wise_toss = [
+  { label: "Hyderabad", size: 3.4693877551020407, x: 49, y: 17 },
+  { label: "Pune", size: 5.9375, x: 32, y: 19 },
+  { label: "Rajkot", size: 4.0, x: 10, y: 4 },
+  { label: "Indore", size: 8.0, x: 5, y: 4 },
+  { label: "Bangalore", size: 5.454545454545454, x: 66, y: 36 },
+  { label: "Mumbai", size: 5.0588235294117645, x: 85, y: 43 },
+  { label: "Kolkata", size: 5.573770491803279, x: 61, y: 34 },
+  { label: "Delhi", size: 5.166666666666667, x: 60, y: 31 },
+  { label: "Chandigarh", size: 4.3478260869565215, x: 46, y: 20 },
+  { label: "Kanpur", size: 10.0, x: 4, y: 4 },
+  { label: "Jaipur", size: 4.545454545454545, x: 33, y: 15 },
+  { label: "Chennai", size: 5.208333333333334, x: 48, y: 25 },
+  { label: "Cape Town", size: 5.7142857142857135, x: 7, y: 4 },
+  { label: "Port Elizabeth", size: 4.285714285714286, x: 7, y: 3 },
+  { label: "Durban", size: 6.0, x: 15, y: 9 },
+  { label: "Centurion", size: 6.666666666666666, x: 12, y: 8 },
+  { label: "East London", size: 6.666666666666666, x: 3, y: 2 },
+  { label: "Johannesburg", size: 3.75, x: 8, y: 3 },
+  { label: "Kimberley", size: 6.666666666666666, x: 3, y: 2 },
+  { label: "Bloemfontein", size: 10.0, x: 2, y: 2 },
+  { label: "Ahmedabad", size: 5.0, x: 12, y: 6 },
+  { label: "Cuttack", size: 7.142857142857143, x: 7, y: 5 },
+  { label: "Nagpur", size: 3.333333333333333, x: 3, y: 1 },
+  { label: "Dharamsala", size: 5.555555555555555, x: 9, y: 5 },
+  { label: "Kochi", size: 4.0, x: 5, y: 2 },
+  { label: "Visakhapatnam", size: 3.6363636363636367, x: 11, y: 4 },
+  { label: "Raipur", size: 5.0, x: 6, y: 3 },
+  { label: "Ranchi", size: 5.7142857142857135, x: 7, y: 4 },
+  { label: "Abu Dhabi", size: 7.142857142857143, x: 7, y: 5 },
+  { label: "Sharjah", size: 3.333333333333333, x: 6, y: 2 },
 ];
