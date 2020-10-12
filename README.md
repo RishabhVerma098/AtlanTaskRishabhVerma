@@ -1,68 +1,35 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Atlan Frontend Task
 
-## Available Scripts
+> Task: Use the IPL data ([given](https://www.kaggle.com/saurav9786/indian-premier-league-match-analysis))  to create a web app (a dashboard using data visualizations/graphs) with interesting, out-of-the-box stats or trivia.
+> **Live [link](https://rishabhverma098.github.io/AtlanTaskRishabhVerma/)** 
 
-In the project directory, you can run:
 
-### `npm start`
+## Web Framework
+React.js is used to create the required dashboard. Redux is used for state management.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Data
+Data is provided in .cvs format. Used Python to filter the required the data and convert into JSON which was later stored in frontend as a static data.
+Code repo of python where data is filtered - [REPO](https://github.com/RishabhVerma098/pythonDataFilterAtlanTask)
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## Important library Used
+* [Redux](https://www.npmjs.com/package/redux)
+   * Used for state management.
+* [React-vis](https://www.npmjs.com/package/react-vis)
+   * React-vis is a lightweight React visualization library made & used by Uber.
+     It is lightweight , High-level & customizable.
+* [React-responsive](https://www.npmjs.com/package/react-responsive)
+   * To use Media queries in react for responsive design.
 
-### `npm test`
+## Bonus points
+* **Fully responsive**
+  * Support for all type of device , works with all Desktop, tablets, Mobile.
+* **PWA**
+  * It is Progressive web app that can added to homescreen of all the supported 
+    devices. Service worker is used to achive this feature.Impportant request are 
+    cached.
+* **Offline support**
+  * It has the ability to work offline, all the functionality will work in offline 
+    mode. All the pages are picked from cache.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
