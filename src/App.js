@@ -1,15 +1,24 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Heading from "./components/heading/heading";
 import BoxArray from "./components/boxarray/boxarray";
 import BottomContainer from "./components/bottomcontainer/bottomcontainer";
 import Pie from "./components/pie/pie";
 import LocationToss from "./components/locationtoss/locationtoss";
 import "./App.scss";
-
+import { swDev } from "./swDev";
 function App() {
+  const [offline, setOffline] = useState(false);
+  useEffect(() => {
+    if (!navigator.onLine) {
+      setOffline(true);
+    } else {
+      setOffline(false);
+    }
+  }, []);
   return (
     <div className="App">
       <Heading />
+      {offline && <h6>You are offline</h6>}
       <BoxArray />
       <BottomContainer />
       <Pie />
@@ -31,3 +40,4 @@ function App() {
 }
 
 export default App;
+swDev();
