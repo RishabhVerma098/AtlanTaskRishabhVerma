@@ -1,39 +1,36 @@
-/**
- * Welcome to your Workbox-powered service worker!
- *
- * You'll need to register this file in your web app and you should
- * disable HTTP caching for this file too.
- * See https://goo.gl/nhQhGp
- *
- * The rest of the code is auto-generated. Please don't update this file
- * directly; instead, make changes to your Workbox build configuration
- * and re-run your build process.
- * See https://goo.gl/2aRDsh
- */
+let cacheData = "appV1";
 
-importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
-
-importScripts(
-  "/AtlanTaskRishabhVerma/precache-manifest.8bedd5ae32ea56f577db6d172a306366.js"
-);
-
-self.addEventListener('message', (event) => {
-  if (event.data && event.data.type === 'SKIP_WAITING') {
-    self.skipWaiting();
-  }
+this.addEventListener("install", (event) => {
+  event.waitUntill(
+    caches.open(cacheData).then((cache) => {
+      cache.addAll([
+        "static/js/bundle.js",
+        // "/static/js/0.chunk.js",
+        // "/static/js/main.chunk.js",
+        // "/static/js/1.chunk.js",
+        "static/css/2.5a2f7233.chunk.css",
+        "static/css/main.cb9ffb5f.chunk.css",
+        "static/js/2.0885b664.chunk.js",
+        "static/js/main.1e30c515.chunk.js",
+        "static/js/runtime-main.57c95b75.js",
+        "static/media/logo.07f09d74.png",
+        "index.html",
+        "/",
+      ]);
+    })
+  );
 });
 
-workbox.core.clientsClaim();
-
-/**
- * The workboxSW.precacheAndRoute() method efficiently caches and responds to
- * requests for URLs in the manifest.
- * See https://goo.gl/S9QRab
- */
-self.__precacheManifest = [].concat(self.__precacheManifest || []);
-workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
-
-workbox.routing.registerNavigationRoute(workbox.precaching.getCacheKeyForURL("/AtlanTaskRishabhVerma/index.html"), {
-  
-  blacklist: [/^\/_/,/\/[^\/?]+\.[^\/]+$/],
+this.addEventListener("fetch", (event) => {
+  if (!navigator.onLine) {
+    event.respondWith(
+      caches.match(event.request).then((result) => {
+        if (result) {
+          return result;
+        }
+        let requestUrl = event.request.clone();
+        return fetch(requestUrl);
+      })
+    );
+  }
 });
