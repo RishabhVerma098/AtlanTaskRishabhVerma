@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/AtlanTaskRishabhVerma/static/css/main.cb9ffb5f.chunk.css",
-    "main.js": "/AtlanTaskRishabhVerma/static/js/main.1e30c515.chunk.js",
-    "main.js.map": "/AtlanTaskRishabhVerma/static/js/main.1e30c515.chunk.js.map",
+    "main.js": "/AtlanTaskRishabhVerma/static/js/main.362794f6.chunk.js",
+    "main.js.map": "/AtlanTaskRishabhVerma/static/js/main.362794f6.chunk.js.map",
     "runtime-main.js": "/AtlanTaskRishabhVerma/static/js/runtime-main.57c95b75.js",
     "runtime-main.js.map": "/AtlanTaskRishabhVerma/static/js/runtime-main.57c95b75.js.map",
     "static/css/2.5a2f7233.chunk.css": "/AtlanTaskRishabhVerma/static/css/2.5a2f7233.chunk.css",
     "static/js/2.0885b664.chunk.js": "/AtlanTaskRishabhVerma/static/js/2.0885b664.chunk.js",
     "static/js/2.0885b664.chunk.js.map": "/AtlanTaskRishabhVerma/static/js/2.0885b664.chunk.js.map",
     "index.html": "/AtlanTaskRishabhVerma/index.html",
-    "precache-manifest.8bedd5ae32ea56f577db6d172a306366.js": "/AtlanTaskRishabhVerma/precache-manifest.8bedd5ae32ea56f577db6d172a306366.js",
+    "precache-manifest.d7748150864d206541c05004c3042624.js": "/AtlanTaskRishabhVerma/precache-manifest.d7748150864d206541c05004c3042624.js",
     "service-worker.js": "/AtlanTaskRishabhVerma/service-worker.js",
     "static/css/2.5a2f7233.chunk.css.map": "/AtlanTaskRishabhVerma/static/css/2.5a2f7233.chunk.css.map",
     "static/css/main.cb9ffb5f.chunk.css.map": "/AtlanTaskRishabhVerma/static/css/main.cb9ffb5f.chunk.css.map",
@@ -21,6 +21,6 @@
     "static/css/2.5a2f7233.chunk.css",
     "static/js/2.0885b664.chunk.js",
     "static/css/main.cb9ffb5f.chunk.css",
-    "static/js/main.1e30c515.chunk.js"
+    "static/js/main.362794f6.chunk.js"
   ]
 }
